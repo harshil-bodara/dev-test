@@ -1,0 +1,51 @@
+hi Rutvik. thanks for your interest. please complete this test at your earliest convenience to be considered for the job: https://nomey.mintlify.app/pages/dev/bootcamp/test-and-task; the test must be pushed within 12hrs of receiving this link, please ensure you follow all submission guidelines.
+
+
+Test & Ticket
+To get everyone started on the same page and to best a replicate real world scenario, we have created a simple public copy of our stack.
+Repository: Nomey® Dev Test
+​
+⛰️ Environment Setup
+Fork the repository to your own GitHub account.
+Clone your fork to your local machine.
+Install dependencies by running npm install or yarn install.
+Create a .env file in the root of the project and copy the values from this throwaway-env.mdx file.
+Run the containers with docker compose up to start the local development environment.
+Run the migrations with npm run db:migrate to set up the database.
+Run the development server with npm run dev or yarn dev.
+Open the application in your browser at http://localhost:3000.
+​
+📃 Submission Guidelines
+Once you have completed the ticket, please submit a pull request to your forked repository with the following:
+A clear description of the changes you made.
+A Loom / Screenshots of the changes in action.
+Any additional notes or comments you think are relevant.
+ℹ️ Note: Just PR like you would in a real-world scenario.
+Send us the link to the PR for review.
+​
+🎫 Ticket
+​
+Description
+Build a reusable, abstracted Server-Sent Events (SSE) layer to enable real-time, server-to-client notifications across the app. This base SSE service will manage client connections, handle event dispatching, and provide a clean interface for backend features to push updates to connected clients.
+​
+Goals
+Implement a centralized SSE manager to:
+Track active client connections (e.g., per user or session).
+Send named events with payloads to specific clients or broadcast to multiple clients.
+Handle client connection lifecycle (connect, disconnect, errors).
+Provide an API or utility functions for backend modules (e.g., webhook handlers, job processors) to send notifications without managing SSE protocol details.
+Ensure SSE connections remain alive with heartbeat/ping messages to prevent timeouts.
+Clean up client connections properly on disconnect or errors to avoid resource leaks.
+​
+Acceptance Criteria
+SSE endpoint implemented to accept client connections and maintain open streams.
+Clients can subscribe and receive events pushed from the server.
+Server code can send arbitrary named events with JSON payloads to individual or multiple clients.
+Heartbeat/ping mechanism in place to keep connections alive.
+Proper handling of client disconnects with cleanup of server resources.
+Error handling and logging included.
+Well-documented usage for backend integration.
+​
+Mock UI
+This isn’t a UI ticket, so any UI to prove the SSE functionality is sufficient. A Button and a Text component that shows the latest SSE message is enough.
+
